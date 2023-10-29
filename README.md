@@ -3,7 +3,5 @@
 ```bash
 npm i # To install All packages
 
-npm run build # To Build the Project in ./dist/
-
-npm run dev # To Run Development Server
+npm run dev # To Run Development Server, root dir ./src/*
 ```

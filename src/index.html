@@ -29,7 +29,7 @@
             </p>
             <button
               class="col-12 mx-auto w-25 btn btn-primary"
-              onclick="update_quote()"
+              onclick="{update_quote()}"
             >
               Get New Quote
             </button>
@@ -37,20 +37,6 @@
         </div>
       </div>
     </div>
-    <script>
-      function update_quote() {
-        url = "https://api.quotable.io/random";
-        document.getElementById("quote_text").innerHTML =
-          "<p class='text-danger'>Retrieving Quote...</p>";
-        fetch(url)
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(`${data.content} —${data.tags[0]}`);
-            document.getElementById("quote_text").innerHTML =
-              data.content + "<br>" + "By — " + data.author;
-          });
-      }
-      update_quote();
-    </script>
+    <script src="./main.js"></script>
   </body>
 </html>
